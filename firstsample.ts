@@ -70,3 +70,13 @@ let b = 20;
 
 
 
+//Drawback with javascript is it is not a strongly typed language and it does not support modern programming concepts like OOPs
+// functions aruguments in JavaScript are not type checked
+function add(a, b){
+    return a + b;
+}
+
+console.log(add(10, 20)); //30
+console.log(add("Hello ", "World")); //Hello World
+
+//Difference between let and var in TS is scope. Let uses block scope whereas var uses function scope

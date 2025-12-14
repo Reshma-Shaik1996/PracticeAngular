@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var x = 10;
 var str = "Hello, TypeScript!";
 var isValid = true;
@@ -10,12 +12,12 @@ unk = 20;
 console.log(x);
 console.log(str);
 console.log(isValid);
-var x1 = 20;
+let x1 = 20;
 var y1 = 200;
 if (true) {
-    var x1_1 = 30; //block scope
+    let x1 = 30; //block scope
     var y1 = 300; //function or global scope
-    console.log(x1_1); //30
+    console.log(x1); //30
     console.log(y1); //300
 }
 console.log(x1); //20
@@ -24,15 +26,15 @@ for (var i = 0; i < 5; i++) {
     console.log(i);
 }
 console.log("Outside loop: " + i); //5
-for (var j = 0; j < 5; j++) {
+for (let j = 0; j < 5; j++) {
     console.log(j);
 }
 //console.log("Outside loop: " + j); //Error: j is not defined
-//Hoisting in JS
-console.log(a); //undefined
+//Hoisting in JavaScript and TypeScript - which is the default behavior of moving declarations to the top of the current scope
+//console.log(a); //undefined
 var a = 10;
 //console.log(b); //Error: b is not defined
-var b = 20;
+let b = 20;
 // To run the above code I need a TypeScript compiler
 //To download TypeScript compiler use the following command in terminal - I need NodeJS
 //What is NodeJS ? - NodeJS is a JavaScript runtime built on Chrome's V8 JavaScript engine.
@@ -51,3 +53,4 @@ var b = 20;
 // Save the file
 //npx tsc firstsample.ts  -- this will compile only firstsample.ts file
 //node firstsample.js  -- this will run the generated JavaScript code using NodeJS runtime
+//# sourceMappingURL=firstsample.js.map
